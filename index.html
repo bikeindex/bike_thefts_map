@@ -13,17 +13,28 @@ layout: default
 <div id="map"></div>
 
 <script>
-  var url = "https://bikewise.org/api/v2/locations/markers?incident_type=theft&proximity_square=100&proximity=Portland%2C%20OR";
+  window.base_url = "https://bikewise.org/api/v2/locations/markers?";
+
+  var query_url = "proximity=portland%2C%20OR&proximity_square=100";
 
   L.mapbox.accessToken = 'pk.eyJ1IjoiYmlrZWluZGV4IiwiYSI6Im40dGJpNE0ifQ.Bnz4uVCHtWsSiPiBWzPeDw';
 
   var map = L.mapbox.map('map', 'bikeindex.lo8d0cfk', {
     zoomControl: false
-  }).setView([45.521563, -122.673734], 10);
+  }).setView([45.2241,-122.1446], 10);
   var hash = new L.Hash(map);
-
   // map.legendControl.addLegend(document.getElementById('legend').innerHTML);
 
-  var featureLayer = L.mapbox.featureLayer().loadURL(url).addTo(map);
+  var featureLayer = L.mapbox.featureLayer().loadURL(window.base_url + query_url).addTo(map);
+
+  $(window).on('hashchange', function(e) {
+    var l = e.originalEvent.newURL.split('/');
+    var lng = l.pop();
+    var lat = l.pop();
+    var urld = window.base_url + "proximity=" + lat + "," + lng;
+    var featureLayer = L.mapbox.featureLayer().loadURL(urld).addTo(map);
+  });
+
+  
 
 </script>

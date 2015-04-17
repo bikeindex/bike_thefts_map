@@ -17,4 +17,10 @@ To edit what is going on, open [index.html](index.html). The javascript is inlin
 
 This will eventually be much more interactive, and have cool filters and tools for exploring bike data.
 
-For now though... It's pretty static.
+For now though... it's pretty static.
+
+Also, browser windows will eventually get bogged down because of ever increasing map markers that aren't cleaned up, and if you zoom out it doesn't cluster like it should.
+
+And it starts in Portland, always.
+
+[bikeicorn.com](http://bikeicorn.com)
