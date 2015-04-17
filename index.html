@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div id='legend' style='display:none;'>
+  <strong>Reload thefts for a new location</strong>
+  <input type="text" id="thefts-location">
+</div>
+
+</div>
+
+<div id="map"></div>
+
+<script>
+  var center_location = "Portland%2C%20OR";
+  var base_url = "https://bikewise.org/api/v2/locations/markers?incident_type=theft&proximity_square=100&proximity=";
+
+  L.mapbox.accessToken = 'pk.eyJ1IjoiYmlrZWluZGV4IiwiYSI6Im40dGJpNE0ifQ.Bnz4uVCHtWsSiPiBWzPeDw';
+
+  var map = L.mapbox.map('map', 'bikeindex.lo8d0cfk', {
+    zoomControl: false
+  }).setView([45.521563, -122.673734], 10);
+
+  // map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+
+  var featureLayer = L.mapbox.featureLayer().loadURL(base_url + center_location).addTo(map);
+
+
+</script>
