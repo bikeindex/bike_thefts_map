@@ -8,19 +8,18 @@ Intended to be used as examples of what is possible, and also to help give an id
 
 This is a [Jekyll project](http://jekyllrb.com/) - so once you've installed jekyll, all you need to do is run `jekyll serve` from the directory and it will start a local copy that updates on changes.
 
-To edit what is going on, open [index.html](index.html). The javascript is inlined right now, but it will be improved in the future.
+To edit what is going on, open [assets/base.coffee](assets/base.coffee). 
 
 
 
 ---
 
+#### Future goals
 
-This will eventually be much more interactive, and have cool filters and tools for exploring bike data.
-
-For now though... it's pretty static.
-
-Also, browser windows will eventually get bogged down because of ever increasing map markers that aren't cleaned up, and if you zoom out it doesn't cluster like it should.
-
-And it starts in Portland, always.
+- Add a query box in the legend for full text search.
+- Add a selector in the legend for time frame.
+- Figure out a way to clear up old markers. [This](http://stackoverflow.com/questions/22987804/mapbox-clear-marker-not-working) looked promising, but no go. Saving the feature layer globally and emptying it with [setGeoJSON](https://www.mapbox.com/mapbox.js/api/v2.1.8/l-mapbox-featurelayer/#section-featurelayer-setgeojson) also didn't work.
+- Choose a better color scheme for markers.
+- Make sure we're actually getting all the data that we should be during zooming.
 
 [bikeicorn.com](http://bikeicorn.com)
