@@ -107,7 +107,7 @@ setTimeFrame = (int) ->
 
 
 
-window.base_url = 'https://bikewise.org/api/v2/locations/markers?'
+window.base_url = 'https://bikewise.org/api/v2/locations/markers?incident_type=theft&'
 start_us = [40.814, -94.702]
 start_zoom = 5
 window.existing_features = {}
