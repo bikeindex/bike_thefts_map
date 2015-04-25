@@ -35,6 +35,7 @@ getUpdatedData = (url) ->
   zoom = l.pop()
   url = "#{window.base_url}proximity=#{lat},#{lng}#{proximityFromZoom(zoom)}"
   url += "&query=#{window.query}" if window.query?
+  url += "&occurred_after=#{window.occurred_after}" if window.occurred_after?
   unless zoom.match('#')
     lng = start_us[1]
     lat = start_us[0]
@@ -67,6 +68,44 @@ addLegendActions = ->
 
   map.getContainer().querySelector('#clear_map').onclick = ->
     clearMap()
+
+  for t in [1..6]
+    map.getContainer().querySelector("#time_#{t}").onclick = ->
+      int = parseInt(@id.match(/\d+/)[0], 10)
+      if @className == 'active'
+        @className = ''
+        for below in [int+1..6]
+          $(".map-legend #time_#{below}").removeClass('active')
+      else
+        @className = 'active'
+        for above in [int-1..1]
+          $(".map-legend #time_#{above}").addClass('active')
+        unless int == 6
+          for below in [int+1..6] 
+            $(".map-legend #time_#{below}").removeClass('active')
+      $(".map-legend #time_1").addClass('active')
+      for i in [6..1]
+        if $(".map-legend #time_#{i}").hasClass('active')
+          setTimeFrame(i)
+          break
+
+setTimeFrame = (int) ->
+  now = Math.floor(Date.now() / 1000)
+  tframe = [
+    now - 86400, # 24 hours ago
+    now - 604800, # 1 week ago
+    now - 2592000, # 1 month ago
+    now - 15552000, # 6 months ago
+    now - 31557600, # 1 year ago
+    now - 157788000, # 5 years ago
+  ]
+  if int == 6
+    window.occurred_after = null
+  else
+    window.occurred_after = tframe[int-1]
+  getUpdatedData(window.location.href)
+
+
 
 window.base_url = 'https://bikewise.org/api/v2/locations/markers?'
 start_us = [40.814, -94.702]
