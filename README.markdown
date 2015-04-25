@@ -14,16 +14,15 @@ To edit what is going on, open [assets/base.coffee](assets/base.coffee).
 
 ---
 
-#### Future goals
+#### Future features and enhancements
 
-- Add a query box in the legend for full text search.
+- Clear up old markers if the screen or memory gets overwhelmed (or at least add a button to clear). We're keeping track of how many we create and not duplicating them, but we should destroy them if there are too many.
 
 - Add a selector in the legend for time frame.
 
-- Figure out a way to clear up old markers. [This](http://stackoverflow.com/questions/22987804/mapbox-clear-marker-not-working) looked promising, but no go. Saving the feature layer globally and emptying it with [setGeoJSON](https://www.mapbox.com/mapbox.js/api/v2.1.8/l-mapbox-featurelayer/#section-featurelayer-setgeojson) also didn't work.
-
-- Choose a better color scheme for markers.
+- Save the search in the params somehow, so urls can be shared.
 
 - Make sure we're actually getting all the data that we should be during zooming.
+
 
 [maps.bikewise.org](http://maps.bikewise.org)

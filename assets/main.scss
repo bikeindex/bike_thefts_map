@@ -5,6 +5,11 @@
 
 $border-radius: 4px;
 
+$blue-lighter: #EBF5FB;
+$blue-light: #99CBED;
+$blue: #3498DB;
+$blue-dark: #2C3E50;
+
 html, body {
   margin:0;
   padding:0;
@@ -32,21 +37,100 @@ html, body {
 }
 
 .map-legends .map-legend {
-  background: #ccc;
+  background: #fff;
   border-radius: $border-radius;
+  a {
+    cursor: pointer;
+  }
+}
+.hidden-legend-wrapper { padding-bottom: .5em; }
+
+#toggle_legend {
+  color: #ccc;
+  float: right;
+  &.active { margin-top: .5em; }
+  &:hover, &:focus {
+    color: #3887BE;
+  }
 }
 
-#thefts-location {
-  display: block;
-  width: 100%;
-  height: auto;
-  font-weight: 200;
-  font-size: 16px;
-  line-height: 1.2em;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: $border-radius;
-  padding: .3em .5em;
-  margin-top: .4em;
 
+.search-box {
+  clear: both;
+  img {
+    float: left;
+    width: 20%;
+  }
+  input {
+    float: left;
+    width: 83%;
+    display: block;
+    height: auto;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.2em;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    padding: .3em .5em;
+    // margin: .4em 0 0 0;
+    font-family: 'Helvetica Neue',Arial,Helvetica,sans-serif;
+  }
+  #searchbtn {
+    float: left; 
+    width: 14.6666%;
+    margin-left: 2.33333%;
+    display: block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 200;
+    border-radius: $border-radius;
+    background: $blue-dark;
+    text-align: center;
+    color: white;
+    padding: .3em 0;
+    border: 1px solid transparent;
+    font-family: 'Helvetica Neue',Arial,Helvetica,sans-serif;
+    span {
+      background: url("/assets/search_white.svg") no-repeat;
+      background-size: contain;
+      background-position: center;
+      display: block;
+      font-size: 16px;
+      height: 1.2em;
+      width: 100%;
+    }
+    &:hover {
+      background: $blue;
+    }
+  }
+}
+
+.clearit {
+  float: right;
+  button {
+    background: none;
+    border: none; 
+    color: $blue;
+    padding: 0;
+    &:hover, &:focus, &:active {
+      text-decoration: underline;
+      outline: none;
+    }
+  }
+}
+
+#clear_map {  }
+
+.clearer { clear: both; padding: 0 0 .5em; }
+
+.legend label,
+.legend span {
+  display:block;
+  float:left;
+  height:15px;
+  width:16.6666%;
+  text-align:center;
+  font-size:9px;
+  color:#808080;
 }

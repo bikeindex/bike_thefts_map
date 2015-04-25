@@ -5,8 +5,40 @@ layout: default
 <!-- <div id='legend' style='display:none;'>
   <img src="https://s3.amazonaws.com/bikeindex/stored/logo_striped_short.svg">
   <input type="text" id="thefts-location">
-  <a id="searchbtn">Search</a>
+  <a href='#' id="searchbtn">Search</a>
+</div> -->
+
+<div id='hidden_legend' style='display:none;'>
+  <p class="hidden-legend-wrapper"><a id="toggle_legend">+</a></p>
 </div>
- -->
+
+<div id='legend' style='display:none;'>
+  <div class="search-box clearfix">
+    <!-- <img src="https://s3.amazonaws.com/bikeindex/stored/logo_striped_short.svg"> -->
+    <input type="text" id="thefts-location">
+    <button id="searchbtn">
+      <span></span>
+    </button>
+  </div>
+  <small class="clearit">(<button id="clear_map">clear map</button>)</small>
+  <div class="clearer"></div>
+  <nav class='legend clearfix'>
+    <span style='background:#F6B9B3;'></span>
+    <span style='background:#F29D94;'></span>
+    <span style='background:#EE8276;'></span>
+    <span style='background:#EB6759;'></span>
+    <span style='background:#E74C3C;'></span>
+    <span style='background:#BD1622;'></span>
+    <label>> 5 years</label>
+    <label>1 year</label>
+    <label>6 months</label>
+    <label>1 month</label>
+    <label>1 week</label>
+    <label>< 1 day</label>
+    <small>When theft occurred</small>
+    <a id="toggle_legend" class="active">x</a>
+  </nav>
+
+</div>
 
 <div id="map"></div>
