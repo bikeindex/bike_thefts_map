@@ -108,21 +108,22 @@ html, body {
 
 .clearit {
   float: right;
+  color: #aaa;
   button {
     background: none;
     border: none; 
     color: $blue;
     padding: 0;
+    cursor: pointer;
+    color: #aaa;
     &:hover, &:focus, &:active {
-      text-decoration: underline;
       outline: none;
+      color: #3887BE;
     }
   }
 }
 
-#clear_map {  }
-
-.clearer { clear: both; padding: 0 0 .5em; }
+.clearer { clear: both; padding: 0 0 .25em; }
 
 .legend label,
 .legend span {
