@@ -106,13 +106,12 @@ html, body {
   }
 }
 
-.clearit {
+.clearit, .showmore {
   float: right;
   color: #aaa;
-  button {
+  #show_more, button {
     background: none;
     border: none; 
-    color: $blue;
     padding: 0;
     cursor: pointer;
     color: #aaa;
@@ -122,6 +121,13 @@ html, body {
     }
   }
 }
+
+.showmore {
+  float: left;
+  #show_more { color: #ccc; }
+}
+
+
 
 .clearer { clear: both; padding: 0 0 .25em; }
 

@@ -28,12 +28,13 @@ setFeatures = (geojson, clear) ->
   # Add the deduped features to the map!
   window.markers.push L.mapbox.featureLayer(geojson).addTo map
 
-getUpdatedData = (url) ->
+getUpdatedData = (url=window.location.href) ->
   l = url.split('/')
   lng = l.pop()
   lat = l.pop()
   zoom = l.pop()
   url = "#{window.base_url}proximity=#{lat},#{lng}#{proximityFromZoom(zoom)}"
+  url += "&limit=#{window.limit}" if window.limit?
   url += "&query=#{window.query}" if window.query?
   url += "&occurred_after=#{window.occurred_after}" if window.occurred_after?
   unless zoom.match('#')
@@ -64,10 +65,22 @@ addLegendActions = ->
 
   map.getContainer().querySelector('#searchbtn').onclick = ->
     window.query = $('.map-legend #thefts-location').val()
-    getUpdatedData(window.location.href)
+    getUpdatedData()
 
   map.getContainer().querySelector('#clear_map').onclick = ->
     clearMap()
+
+  map.getContainer().querySelector('#show_more').onclick = ->
+    if @className == 'active'
+      @innerHTML = 'show 500 (slower)'
+      window.limit = 100
+      @className = ''
+    else
+      window.limit = 500
+      @className = 'active'
+      @innerHTML = 'show 100 (default)'
+      getUpdatedData()
+  
 
   for t in [1..6]
     map.getContainer().querySelector("#time_#{t}").onclick = ->
@@ -103,8 +116,7 @@ setTimeFrame = (int) ->
     window.occurred_after = null
   else
     window.occurred_after = tframe[int-1]
-  getUpdatedData(window.location.href)
-
+  getUpdatedData()
 
 
 window.base_url = 'https://bikewise.org/api/v2/locations/markers?incident_type=theft&'
@@ -128,7 +140,7 @@ addLegendActions()
 new (L.Control.Zoom)(position: 'topright').addTo map
 new L.Control.Fullscreen(position: 'topright').addTo map
 
-getUpdatedData(window.location.href)
+getUpdatedData()
 
 $(window).on 'hashchange', (e) ->
   getUpdatedData(e.originalEvent.newURL)
