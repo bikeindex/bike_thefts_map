@@ -9,4 +9,7 @@ url: "http://bikeicorn.com" # the base hostname & protocol for your site
 twitter_username: bikeindex
 github_username:  sethherr
 # Build settings
+exclude: 
+  - README.markdown
+  - CNAME
 markdown: kramdown
