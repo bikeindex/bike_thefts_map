@@ -64,6 +64,7 @@ addLegendActions = ->
     addLegendActions()
 
   map.getContainer().querySelector('#searchbtn').onclick = ->
+    clearMap()
     window.query = $('.map-legend #thefts-location').val()
     getUpdatedData()
 
@@ -84,6 +85,7 @@ addLegendActions = ->
 
   for t in [1..6]
     map.getContainer().querySelector("#time_#{t}").onclick = ->
+      clearMap()
       int = parseInt(@id.match(/\d+/)[0], 10)
       if @className == 'active'
         @className = ''

@@ -1,13 +1,29 @@
-# Bike theft maps
+# Bike theft maps ([map.bikewise.org](http://map.bikewise.org))
 
-### [maps.bikewise.org](http://maps.bikewise.org)
+[Read our post about this project on the Bike Index](https://bikeindex.org/news/mapping-bike-thefts-at-mapbikewiseorg)!
 
-Maps of bike thefts, from [bikeindex.org](https://bikeindex.org) reports. Location data from [bikewise.org](https://bikewise.org), built with [Mapbox](https://mapbox.org).
+Maps of bike thefts, from [bikeindex.org](https://bikeindex.org) reports. Location data from [bikewise.org](https://bikewise.org/documentation), built with [Mapbox](https://mapbox.org).
 
-Intended to be used as examples of what is possible, and also to help give an idea of how the [BikeWise API](https://bikewise.org/documentation) can be used. Also, it's pretty cool.
+![Example map display](readme_example.png)
+
+We wanted our map of thefts to be more than a pretty picture, to provide useful data visualization&mdash;with searching, browsing through time, and links to the reports on Bike Index.
+
+[map.bikewise.org](http://map.bikewise.org) shows the 100 most recent thefts for the area you are viewing. It updates with new results every time you move the map, which has the neat effect of filling in more thefts as you zoom in.
+
+You can search theft and bike data with the search bar&mdash;but searching doesn't move you to matching results, if you search and don't see anything try zooming out.
+
+The markers are colored according to the when the theft happened, the legend explains what the colors mean, and you can click on the time periods in the legend to to filter by them.
+
+And you can clear all the markers with the "clear map" link if you get overwhelmed.
+
+
+### Additions and issues
+
+This was our first mapping project. If you think there are things that should be done differently, please submit an issue!
+
 
 ### Running it locally
 
-This is a [Jekyll project](http://jekyllrb.com/) - so once you've installed jekyll, all you need to do is run `jekyll serve` from the directory and it will start a local copy that updates on changes.
+This is a [Jekyll project](http://jekyllrb.com/) - so once you've installed jekyll, all you need to do is run `jekyll serve` from the project directory in the terminal and it will start a local copy that updates on changes.
 
-To edit what is going on, open [assets/base.coffee](assets/base.coffee). 
+The code that makes this work is in [assets/base.coffee](assets/base.coffee).
