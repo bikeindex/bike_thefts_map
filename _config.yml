@@ -1,7 +1,8 @@
 # Site settings
 title: Bike theft maps
 email: your-email@domain.com
-description: > # Maps of bike thefts, from bikeindex.org reports.
+description: > #
+  Maps of bike thefts, from bikeindex.org reports.
   Location data from bikewise.org, built with Mapbox.
   View the source at https://github.com/sethherr/bikewise_maps
 baseurl: "" # the subpath of your site, e.g. /blog/
