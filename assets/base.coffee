@@ -140,7 +140,6 @@ map.legendControl.addLegend(legend)
 addLegendActions()
 
 new (L.Control.Zoom)(position: 'topright').addTo map
-# new L.Control.Fullscreen(position: 'topright').addTo map
 
 getUpdatedData()
 
