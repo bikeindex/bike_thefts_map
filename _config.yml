@@ -1,12 +1,11 @@
 # Site settings
 title: Bike theft maps
-email: your-email@domain.com
 description: > #
   A live map of bike thefts from bikeindex.org reports.
   built with Mapbox and bikewise.org,
   view the source at https://github.com/sethherr/bikewise_maps
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://bikeicorn.com" # the base hostname & protocol for your site
+url: "https://map.bikewise.org" # the base hostname & protocol for your site
 twitter_username: bikeindex
 github_username:  sethherr
 # Build settings
@@ -14,3 +13,5 @@ exclude:
   - README.markdown
   - CNAME
 markdown: kramdown
+plugins:
+  - jekyll-coffeescript
