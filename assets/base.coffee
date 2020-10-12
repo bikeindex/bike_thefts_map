@@ -129,9 +129,9 @@ window.markers = []
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiYmlrZWluZGV4IiwiYSI6Im40dGJpNE0ifQ.Bnz4uVCHtWsSiPiBWzPeDw'
 
-map = L.mapbox.map('map', 'mapbox.streets', zoomControl: false).setView(start_us, start_zoom)
+map = L.mapbox.map('map', 'mapbox.light', zoomControl: false).setView(start_us, start_zoom)
 
-hash = new (L.Hash)(map)
+# hash = new (L.Hash)(map)
 
 hidden_legend = document.getElementById('hidden_legend').innerHTML
 legend = document.getElementById('legend').innerHTML
@@ -140,7 +140,7 @@ map.legendControl.addLegend(legend)
 addLegendActions()
 
 new (L.Control.Zoom)(position: 'topright').addTo map
-new L.Control.Fullscreen(position: 'topright').addTo map
+# new L.Control.Fullscreen(position: 'topright').addTo map
 
 getUpdatedData()
 
