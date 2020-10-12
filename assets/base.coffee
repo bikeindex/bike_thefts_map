@@ -129,7 +129,7 @@ window.markers = []
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiYmlrZWluZGV4IiwiYSI6Im40dGJpNE0ifQ.Bnz4uVCHtWsSiPiBWzPeDw'
 
-map = L.mapbox.map('map', 'bikeindex.lo8d0cfk', zoomControl: false).setView(start_us, start_zoom)
+map = L.mapbox.map('map', 'mapbox.streets', zoomControl: false).setView(start_us, start_zoom)
 
 hash = new (L.Hash)(map)
 
