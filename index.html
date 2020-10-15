@@ -3,16 +3,16 @@ layout: default
 ---
 
 <div id="hidden_legend" style="display: none;">
-  <p class="hidden-legend-wrapper"><a id="toggle_legend">+</a></p>
+  <p class="hidden-legend-wrapper"><a class="toggle_legend">+</a></p>
 </div>
 
 <div id="legend" style="display: none;">
   <div class="search-box clearfix">
-    <input type="text" id="thefts-location" />
-    <button id="searchbtn"><span></span></button>
+    <input type="text" class="thefts-location" />
+    <button class="searchbtn"><span></span></button>
   </div>
-  <small class="clearit">(<button id="clear_map">clear map</button>)</small>
-  <small class="showmore"><a id="show_more">show 500 (slower)</a></small>
+  <small class="clearit">(<button class="clear_map">clear map</button>)</small>
+  <small class="showmore"><a class="show_more">show 500 (slower)</a></small>
   <div class="clearer"></div>
   <nav class="legend clearfix">
     <span style="background: #f6b9b3;" class="active" id="time_6"></span>
@@ -28,7 +28,7 @@ layout: default
     <label>1 week</label>
     <label>< 1 day</label>
     <small>When theft occurred (click to select time frame)</small>
-    <a id="toggle_legend" class="active">x</a>
+    <a class="toggle_legend" class="active">x</a>
   </nav>
 </div>
 

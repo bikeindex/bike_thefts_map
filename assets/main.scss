@@ -5,24 +5,25 @@
 
 $border-radius: 4px;
 
-$blue-lighter: #EBF5FB;
-$blue-light: #99CBED;
-$blue: #3498DB;
-$blue-dark: #2C3E50;
+$blue-lighter: #ebf5fb;
+$blue-light: #99cbed;
+$blue: #3498db;
+$blue-dark: #2c3e50;
 
-html, body {
-  margin:0;
-  padding:0;
+html,
+body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
   // position: relative;
 }
 
 #map {
-  position:absolute;
-  top:0;
-  bottom:0;
-  width:100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .marker-description {
@@ -33,7 +34,7 @@ html, body {
 }
 
 .map-legends.wax-legends.leaflet-control {
-  background: none; 
+  background: none;
 }
 
 .map-legends .map-legend {
@@ -43,19 +44,24 @@ html, body {
     cursor: pointer;
   }
 }
-.hidden-legend-wrapper { padding-bottom: .5em; }
+.hidden-legend-wrapper {
+  padding-bottom: 0.5em;
+}
 
-#toggle_legend {
+.toggle_legend {
   color: #ccc;
   float: right;
-  &.active { margin-top: .5em; }
-  &:hover, &:focus {
-    color: #3887BE;
+  &.active {
+    margin-top: 0.5em;
+  }
+  &:hover,
+  &:focus {
+    color: #3887be;
   }
 }
 
-
 .search-box {
+  display: none; // hidden because not working since the code update
   clear: both;
   img {
     float: left;
@@ -72,12 +78,12 @@ html, body {
     background-image: none;
     border: 1px solid #ccc;
     border-radius: $border-radius;
-    padding: .3em .5em;
+    padding: 0.3em 0.5em;
     // margin: .4em 0 0 0;
-    font-family: 'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   }
-  #searchbtn {
-    float: left; 
+  .searchbtn {
+    float: left;
     width: 14.6666%;
     margin-left: 2.33333%;
     display: block;
@@ -88,9 +94,9 @@ html, body {
     background: $blue-dark;
     text-align: center;
     color: white;
-    padding: .3em 0;
+    padding: 0.3em 0;
     border: 1px solid transparent;
-    font-family: 'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     span {
       background: url("/assets/search_white.svg") no-repeat;
       background-size: contain;
@@ -106,43 +112,50 @@ html, body {
   }
 }
 
-.clearit, .showmore {
+.clearit,
+.showmore {
   float: right;
   color: #aaa;
-  #show_more, button {
+  #show_more,
+  button {
     background: none;
-    border: none; 
+    border: none;
     padding: 0;
     cursor: pointer;
     color: #aaa;
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       outline: none;
-      color: #3887BE;
+      color: #3887be;
     }
   }
 }
 
 .showmore {
   float: left;
-  #show_more { color: #ccc; }
+  #show_more {
+    color: #ccc;
+  }
 }
 
-
-
-.clearer { clear: both; padding: 0 0 .25em; }
+.clearer {
+  clear: both;
+  padding: 0 0 0.25em;
+}
 
 .legend label,
 .legend span {
-  display:block;
-  float:left;
-  height:16px;
-  width:16.6666%;
-  text-align:center;
-  font-size:9px;
-  color:#808080;
+  display: block;
+  float: left;
+  height: 16px;
+  width: 16.6666%;
+  text-align: center;
+  font-size: 9px;
+  color: #808080;
   cursor: pointer;
 }
 
 .legend span.active {
-  box-shadow: inset 1px 2px 3px rgba(black, .4);
+  box-shadow: inset 1px 2px 3px rgba(black, 0.4);
 }
