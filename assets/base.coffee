@@ -122,7 +122,7 @@ setTimeFrame = (int) ->
   getUpdatedData()
 
 
-window.base_url = 'https://bikewise.org/api/v2/locations/markers?incident_type=theft&'
+window.base_url = "https://bikewise.org/api/v2/locations/markers?incident_type=theft&"
 start_us = [40.814, -94.702]
 start_zoom = 5
 window.existing_features = {}
@@ -130,20 +130,20 @@ window.markers = []
 
 L.mapbox.accessToken = "pk.eyJ1IjoiYmlrZWluZGV4IiwiYSI6ImNrZzc1OGUzYjAzeDUycW15MnJrcjJ3cjcifQ.ke32Jq5-9LuO2_7nONIK0w"
 
-map = L.mapbox.map('map', 'mapbox.light', zoomControl: false).setView(start_us, start_zoom)
+map = L.mapbox.map("map", "mapbox.light", zoomControl: false).setView(start_us, start_zoom)
 
 hash = new (L.Hash)(map)
 
-hidden_legend = document.getElementById('hidden_legend').innerHTML
-legend = document.getElementById('legend').innerHTML
+hidden_legend = document.getElementById("hidden_legend").innerHTML
+legend = document.getElementById("legend").innerHTML
 
 map.legendControl.addLegend(legend)
 addLegendActions()
 
-new (L.Control.Zoom)(position: 'topright').addTo map
+new (L.Control.Zoom)(position: "topright").addTo map
 
 getUpdatedData()
 
-$(window).on 'hashchange', (e) ->
+$(window).on "hashchange", (e) ->
   getUpdatedData(e.originalEvent.newURL)
 
