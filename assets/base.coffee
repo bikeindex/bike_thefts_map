@@ -127,7 +127,7 @@ start_zoom = 5
 window.existing_features = {}
 window.markers = []
 
-L.mapbox.accessToken = 'pk.eyJ1IjoiYmlrZWluZGV4IiwiYSI6ImNrZzc1OGUzYjAzeDUycW15MnJrcjJ3cjcifQ.ke32Jq5-9LuO2_7nONIK0w'
+L.mapbox.accessToken = "pk.eyJ1IjoiYmlrZWluZGV4IiwiYSI6ImNrZzc1OGUzYjAzeDUycW15MnJrcjJ3cjcifQ.ke32Jq5-9LuO2_7nONIK0w"
 
 map = L.mapbox.map('map', 'mapbox.light', zoomControl: false).setView(start_us, start_zoom)
 

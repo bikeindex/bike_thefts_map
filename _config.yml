@@ -7,9 +7,9 @@ description: > #
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://map.bikewise.org" # the base hostname & protocol for your site
 twitter_username: bikeindex
-github_username:  sethherr
+github_username: sethherr
 # Build settings
-exclude: 
+exclude:
   - README.markdown
   - CNAME
 markdown: kramdown
