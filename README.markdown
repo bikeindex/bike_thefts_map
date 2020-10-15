@@ -24,6 +24,13 @@ This was our first mapping project. If you think there are things that should be
 
 ### Running it locally
 
-This is a [Jekyll project](http://jekyllrb.com/) - so once you've installed jekyll, all you need to do is run `jekyll serve` from the project directory in the terminal and it will start a local copy that updates on changes.
+
+
+This is a [Jekyll project](http://jekyllrb.com/). From the project directory in the terminal:
+
+- Install Jekyll with `gem install jekyll && gem install jekyll-coffeescript`
+- Start the dev server with `jekyll serve`
+
+It will start a local copy that updates on changes.
 
 The code that makes this work is in [assets/base.coffee](assets/base.coffee).
