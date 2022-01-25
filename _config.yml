@@ -2,8 +2,6 @@
 title: Bike theft maps
 description: > #
   A live map of bike thefts from bikeindex.org reports.
-  built with Mapbox and bikewise.org,
-  view the source at https://github.com/sethherr/bikewise_maps
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://map.bikewise.org" # the base hostname & protocol for your site
 twitter_username: bikeindex
@@ -12,6 +10,3 @@ github_username: sethherr
 exclude:
   - README.markdown
   - CNAME
-markdown: kramdown
-plugins:
-  - jekyll-coffeescript
