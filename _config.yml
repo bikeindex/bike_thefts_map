@@ -1,7 +1,7 @@
 # Site settings
 title: Bike theft maps
 description: > #
-  A live map of bike thefts from bikeindex.org reports.
+  A live map of bike thefts from bikeindex.org thefts.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://map.bikewise.org" # the base hostname & protocol for your site
 twitter_username: bikeindex
@@ -10,3 +10,7 @@ github_username: sethherr
 exclude:
   - README.markdown
   - CNAME
+  - Gemfile
+  - Gemfile.lock
+plugins:
+  - jekyll-environment-variables
