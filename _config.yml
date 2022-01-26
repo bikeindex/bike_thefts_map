@@ -12,5 +12,6 @@ exclude:
   - CNAME
   - Gemfile
   - Gemfile.lock
+# Plugins don't run on GitHub pages, so make sure that things work without this!
 plugins:
   - jekyll-environment-variables
