@@ -30,6 +30,15 @@
       rel="stylesheet"
     />
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+
+    <!-- Use environmental variable key if it's present -->
+    <script>
+      window.mapboxKey = '{{ site.env.MAPBOX_KEY }}'
+      if (!window.mapboxKey.length) {
+        window.mapboxKey =
+          'pk.eyJ1IjoiYmlrZWluZGV4IiwiYSI6ImNrZzc1OGUzYjAzeDUycW15MnJrcjJ3cjcifQ.ke32Jq5-9LuO2_7nONIK0w'
+      }
+    </script>
   </head>
 
   <body>
@@ -37,7 +46,10 @@
   </body>
 
   <script src="{{ '/assets/main.js' | prepend: site.baseurl }}"></script>
-
+  <!--
+    Note: this could be included rather than loaded as a script if that is helpful.
+    e.g. script>{% include_relative assets/main.js %}<script
+   -->
   <script>
     ;(function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r
