@@ -38,6 +38,7 @@
         window.mapboxKey =
           'pk.eyJ1IjoiYmlrZWluZGV4IiwiYSI6ImNrZzc1OGUzYjAzeDUycW15MnJrcjJ3cjcifQ.ke32Jq5-9LuO2_7nONIK0w'
       }
+      window.stolengeojson = "{{ '/assets/stolen.geojson' | prepend: site.baseurl }}";
     </script>
   </head>
 
@@ -45,11 +46,10 @@
     {{ content }}
   </body>
 
-  <script src="{{ '/assets/main.js' | prepend: site.baseurl }}"></script>
-  <!--
-    Note: this could be included rather than loaded as a script if that is helpful.
-    e.g. script>{% include_relative assets/main.js %}<script
-   -->
+  <script>
+    {% include_relative main.js %}
+  </script>
+
   <script>
     ;(function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r
