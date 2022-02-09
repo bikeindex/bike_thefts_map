@@ -1,0 +1,4 @@
+#!/bin/bash
+MAPBOX_KEY=$(grep MAPBOX_KEY .env | cut -d '=' -f2)
+export $(egrep -v '^#' .env | xargs)
+bundle exec jekyll serve --livereload
