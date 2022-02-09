@@ -73,25 +73,6 @@ map.on('load', () => {
       'circle-radius': 6
     }
   })
-  // map.addLayer({
-  //   id: 'stolen_bike_label',
-  //   type: 'symbol',
-  //   source: 'stolen_bikes',
-  //   filter: ['!=', 'cluster', true],
-  //   layout: {
-  //     'text-field': [
-  //       'number-format',
-  //       ['get', 'mag'],
-  //       { 'min-fraction-digits': 1, 'max-fraction-digits': 1 }
-  //     ],
-  //     'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-  //     'text-size': 10
-  //   },
-  //   paint: {
-  //     'text-color': ['case', ['<', ['get', 'mag'], 3], 'black', 'white']
-  //   }
-  // })
-
   // objects for caching and keeping track of HTML marker objects (for performance)
   const markers = {}
   let markersOnScreen = {}
